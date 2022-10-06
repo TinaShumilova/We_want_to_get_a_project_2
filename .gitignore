@@ -3,6 +3,7 @@ out/
 target/
 output/
 cucumber-report/
+lib/
 phantomjsdriver.log
 *.jpg
 *.iml
