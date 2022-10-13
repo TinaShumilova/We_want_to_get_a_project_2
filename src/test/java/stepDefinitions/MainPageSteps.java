@@ -2,8 +2,6 @@ package stepDefinitions;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
 import pageObjects.MainPage;
 import static org.junit.Assert.assertEquals;
 
