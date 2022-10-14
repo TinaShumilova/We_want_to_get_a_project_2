@@ -4,10 +4,10 @@ Feature: Team3 Test Case 10 execution
   I want to be able to write and execute 1 scenario for Checkout page
 
   Scenario Outline: a new scenario for to login in Checkout page
-    Given I am on shop page
+    Given I moves to on shop page
     When I add one item in Shopping Cart
-    Then I click to the Checkout link
-    Then I am on Checkout page
+    Then I click on Checkout in top menu
+    Then I am on the Checkout page
     And I input e-mail and password:
       | email    | <email>   |
       | password | <password> |

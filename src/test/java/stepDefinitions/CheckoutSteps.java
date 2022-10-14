@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 
+import com.sun.xml.internal.bind.v2.TODO;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import pageObjects.CheckoutPage;
@@ -12,7 +13,7 @@ import static org.junit.Assert.assertTrue;
 
 public class CheckoutSteps extends GeneralSteps {
 
-    @Then("^I am on Checkout page$")
+    @Then("^I am on the Checkout page$")
     public void assertIAmOnCheckoutPage() throws InterruptedException {
         Thread.sleep(5000);
         assertEquals(checkoutPage.getCheckoutPageUrl(),driver.getCurrentUrl());
@@ -34,5 +35,11 @@ public class CheckoutSteps extends GeneralSteps {
     public void assertBillingDetailesBlockIsEvaible(){
         assertTrue(checkoutPage.getStepTwoBlock().isDisplayed());
 
+    }
+
+    //TODO move to Shoping cart Steps
+    @Then("^I click on Checkout Button in Shopping Cart$")
+    public void checkoutButton() {
+        checkoutPage.clickOnCheckoutButtonInCart();
     }
 }
