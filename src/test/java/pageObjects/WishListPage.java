@@ -21,7 +21,7 @@ public class WishListPage {
     @FindBy(how = How.CSS, using = ".btn.btn-danger")
     public WebElement removeFirstItemFromWishListBtn;
 
-    @FindBy(how = How.CSS, using = "[data-original-title=\"Add to Cart\"]")
+    @FindBy(how = How.XPATH, using = "[data-original-title=\"Add to Cart\"]")
     public WebElement moveToCartFirstItemFromWishListBtn;
 
 

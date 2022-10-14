@@ -166,4 +166,26 @@ public class WishListSteps extends GeneralSteps{
         mainPage.removeFirstItemCartPageBtn.click();
 
     }
+
+    /// new added wish list steps
+
+    @Then("^I assert Wish List count is \"([^\"]*)\"$")
+    public void iAssertWishListCountIs(String wishListCount){
+        mainPage.checkWishListCount(wishListCount);
+    }
+
+    @Then("^I clean my Wish List$")
+    public void iCleanMyWishlist() {
+        mainPage.wishlistPageLinkBtn.click();
+        wishListPage.removeFirstItemFromWishListBtn.click();
+    }
+
+    @Then("^I navigate to SamsungTab PDP$")
+    public void iNavigateToSamsungTabPdp(){
+        mainPage.clickSamsungTabProduct.click();
+    }
+
+
+
+
 }

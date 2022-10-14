@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import static org.junit.Assert.assertEquals;
+
 
 public class MainPage{
 
@@ -58,6 +60,22 @@ public class MainPage{
 
     @FindBy(how = How.XPATH, using = "//*[contains(@class, \"text-danger\")]")
     public WebElement threeStarsMark;
+
+    @FindBy(how = How.XPATH, using = "//img[@title='Samsung Galaxy Tab 10.1']")
+    public WebElement clickSamsungTabProduct;
+
+    @FindBy(how = How.XPATH, using = " //*[@data-original-title='Add to Wish List' and @onclick=\"wishlist.add('42');\"]")
+    public WebElement addSamsungTabProductToWishlist;
+
+    // Team2 new wish list steps
+    public void checkWishListCount(String wishListCount) {
+        String wishListText = wishlistPageLinkBtn.getAttribute("title");
+        assertEquals(wishListText, wishListCount);
+    }
+
+
+
+
 
 //Team2 end
 
